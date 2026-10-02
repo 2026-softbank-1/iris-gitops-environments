@@ -2,7 +2,7 @@
 
 Iris 사용자 서비스의 배포 상태(desired state)를 담는 GitOps 저장소다. management EKS의 Argo CD가 이 저장소를 읽어 workload EKS에 동기화한다.
 
-- 인프라·addon·chart는 [iris-infra](https://github.com/2026-softbank-1/iris-infra)가 관리한다. 이 저장소에는 **서비스별 values만** 둔다.
+- 인프라·addon·chart는 [iris-infra](https://github.com/2026-softbank-1/iris-infra)가 관리한다. 이 저장소에는 **배포마다 바뀌는 values만** 둔다: 사용자 서비스(`services/`)와 control plane 이미지 digest(`platform/`).
 - 결정 배경: iris-infra [ADR 0002](https://github.com/2026-softbank-1/iris-infra/blob/main/docs/decisions/0002-gitops-deployment.md), values 계약: [contracts/deployment.md](https://github.com/2026-softbank-1/iris-infra/blob/main/contracts/deployment.md)
 
 ## 구조
@@ -11,7 +11,12 @@ Iris 사용자 서비스의 배포 상태(desired state)를 담는 GitOps 저장
 services/
 └── {service_id}/
     └── prod/
-        └── values.yaml
+        └── values.yaml          # Deploy Worker
+platform/
+└── aws-dev-management/
+    ├── was.yaml                 # iris-was "Deploy platform" workflow
+    ├── code-analyzer-agent.yaml # iris-code-analyzer-agent workflow
+    └── error-check-agent.yaml   # iris-error-check-agent workflow
 ```
 
 - 서비스 1개 = 디렉터리 1개 = Argo CD Application 1개(`svc-{service_id}`, workload namespace `svc-{service_id}`)
@@ -54,9 +59,15 @@ values 예시(배포마다 달라지는 값만 넣는다. 리소스·Ingress·Ne
 }
 ```
 
+### platform/
+
+- management EKS의 Argo CD Application `iris-platform`이 읽는다. chart와 비밀이 아닌 설정은 iris-infra(`helm/charts/iris-platform`, `clusters/aws-dev-management/values/platform.yaml`)에 있다.
+- **레포마다 파일 하나**이고 그 레포의 workflow만 쓴다. 내용은 컴포넌트별 image digest뿐이다: `{"components": {"api": {"digest": "sha256:..."}, "build-worker": {...}}}`. 실행 방식은 iris-infra가 정하고, 빠지거나 infra에 정의되지 않은 컴포넌트는 배포되지 않는다.
+- workflow는 선택한 컴포넌트의 digest만 바꿔 커밋한다(`deploy platform api,...: iris-was <sha>` + `Iris-Source-Sha`·`Iris-Image-Digest` trailer). rollback은 이전 커밋으로 되돌리는 커밋이다.
+
 ## 규칙
 
-- 사람은 `services/`를 직접 수정하지 않는다. 수동 커밋이 끼면 Worker의 롤백 안전장치가 자동 롤백을 막는다. 긴급 조치는 플랫폼 API(배포·롤백)로 한다.
+- 사람은 `services/`·`platform/`을 직접 수정하지 않는다. 수동 커밋이 끼면 Worker의 롤백 안전장치가 자동 롤백을 막는다. 긴급 조치는 플랫폼 API(배포·롤백)로 한다.
 - 비밀값을 넣지 않는다. 이미지는 tag가 아니라 digest로 지정한다.
 - `main` 보호는 force push·브랜치 삭제 금지만 둔다. "Require a pull request"를 켜면 Worker의 직접 push가 막힌다. 켜야 한다면 GitHub App을 bypass 대상에 넣는다.
 - 저장소 구조·README 변경은 PR로 한다.
@@ -65,7 +76,8 @@ values 예시(배포마다 달라지는 값만 넣는다. 리소스·Ingress·Ne
 
 | 주체 | 권한 | 용도 |
 | --- | --- | --- |
-| Deploy Worker (GitHub App) | Contents: Read and write | values 커밋 |
+| Deploy Worker (GitHub App) | Contents: Read and write | `services/` values 커밋 |
+| 서비스 레포 Deploy platform workflow (GitHub App) | Contents: Read and write | 자기 `platform/aws-dev-management/<repo>.yaml` 커밋 |
 | Argo CD (management EKS) | Contents: Read-only | ApplicationSet 동기화 |
 
 ## 미구현
