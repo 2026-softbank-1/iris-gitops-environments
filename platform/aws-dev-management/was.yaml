@@ -3,9 +3,9 @@
     "digest": "sha256:783f4e060541f79e0337ef384483f9af9ef74c1ccb1ef6355f9a877b5d0de4dd"
   },
   "buildWorker": {
-    "digest": "sha256:1478d07f03339be37d5bc84159b7184f52594166ef56304c1a824a6ccffada47"
+    "digest": "sha256:13b36e0c99aed1e6107114c223e073b29e9a4f1b5ccc8a2ce04d95e69ea09300"
   },
   "deployWorker": {
-    "digest": "sha256:1478d07f03339be37d5bc84159b7184f52594166ef56304c1a824a6ccffada47"
+    "digest": "sha256:13b36e0c99aed1e6107114c223e073b29e9a4f1b5ccc8a2ce04d95e69ea09300"
   }
 }
