@@ -62,7 +62,10 @@ values 예시(배포마다 달라지는 값만 넣는다. 리소스·Ingress·Ne
 ### platform/
 
 - management EKS의 Argo CD Application `iris-platform`이 읽는다. chart와 비밀이 아닌 설정은 iris-infra(`helm/charts/iris-platform`, `clusters/aws-dev-management/values/platform.yaml`)에 있다.
-- **레포마다 파일 하나**이고 그 레포의 workflow만 쓴다. 내용은 컴포넌트별 image digest뿐이다: `{"components": {"api": {"digest": "sha256:..."}, "build-worker": {...}}}`. 실행 방식은 iris-infra가 정하고, 빠지거나 infra에 정의되지 않은 컴포넌트는 배포되지 않는다.
+- **레포마다 파일 하나**이고 그 레포의 workflow만 쓴다. 내용은 iris-platform chart 컴포넌트별 image digest뿐이다.
+  - `was.yaml`: `{"api": {"digest": "sha256:..."}, "buildWorker": {"digest": "..."}, "deployWorker": {"digest": "..."}}`
+  - `error-check-agent.yaml`: `{"errorAgent": {"image": {"digest": "sha256:..."}}}` (iris-infra에서 `errorAgent.enabled`일 때만 배포)
+- 실행 방식(이미지 저장소·host·Secret 이름 등)은 iris-infra `clusters/aws-dev-management/values/platform.yaml`이 정한다. digest가 없는 컴포넌트는 배포되지 않는다.
 - workflow는 선택한 컴포넌트의 digest만 바꿔 커밋한다(`deploy platform api,...: iris-was <sha>` + `Iris-Source-Sha`·`Iris-Image-Digest` trailer). rollback은 이전 커밋으로 되돌리는 커밋이다.
 
 ## 규칙
