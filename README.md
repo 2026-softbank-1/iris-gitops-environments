@@ -7,7 +7,7 @@ Iris 사용자 서비스의 배포 상태(desired state)를 담는 GitOps 저장
 
 ## 구조
 
-```
+```text
 services/
 └── {service_id}/
     └── prod/
@@ -31,7 +31,7 @@ flowchart LR
 모든 변경은 Deploy Worker(GitHub App)가 GitHub API로 만든다.
 
 | 동작 | 커밋 제목 | 내용 |
-|---|---|---|
+| --- | --- | --- |
 | 배포 | `deploy service {id}` | `services/{id}/prod` 디렉터리를 새 values로 통째로 교체 |
 | 롤백 | `revert service {id}` | 직전 정상 release 시점의 디렉터리 tree로 복원 |
 
@@ -64,7 +64,7 @@ values 예시(배포마다 달라지는 값만 넣는다. 리소스·Ingress·Ne
 ## 접근 권한
 
 | 주체 | 권한 | 용도 |
-|---|---|---|
+| --- | --- | --- |
 | Deploy Worker (GitHub App) | Contents: Read and write | values 커밋 |
 | Argo CD (management EKS) | Contents: Read-only | ApplicationSet 동기화 |
 
