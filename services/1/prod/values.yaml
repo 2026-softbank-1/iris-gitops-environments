@@ -1,0 +1,17 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:c044fbae2f4af59dfa5f8656795ae1a46ce6652444d606218d38a1893b587597",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/1"
+  },
+  "release": {
+    "id": 1,
+    "sourceSha": "7e18ff9f6748cd162bd1be6488f1ae75162f7263"
+  },
+  "route": {
+    "host": "railway-deploy-demo-1.likelion.uk"
+  }
+}
