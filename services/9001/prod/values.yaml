@@ -1,0 +1,18 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "path": "/",
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:9eab4f9ed1097bbe09f9571877ece6c212b06d92a31edd88ee0a2cb70039738b",
+    "repository": "public.ecr.aws/nginx/nginx-unprivileged"
+  },
+  "release": {
+    "id": 9001,
+    "sourceSha": "0000000000000000000000000000000000000000"
+  },
+  "route": {
+    "host": "e2e-test.likelion.uk"
+  }
+}
