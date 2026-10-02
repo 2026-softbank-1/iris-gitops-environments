@@ -14,7 +14,9 @@ services/
         └── values.yaml          # Deploy Worker
 platform/
 └── aws-dev-management/
-    └── values.yaml              # iris-was "Deploy platform" workflow
+    ├── was.yaml                 # iris-was "Deploy platform" workflow
+    ├── code-analyzer-agent.yaml # iris-code-analyzer-agent workflow
+    └── error-check-agent.yaml   # iris-error-check-agent workflow
 ```
 
 - 서비스 1개 = 디렉터리 1개 = Argo CD Application 1개(`svc-{service_id}`, workload namespace `svc-{service_id}`)
@@ -60,8 +62,8 @@ values 예시(배포마다 달라지는 값만 넣는다. 리소스·Ingress·Ne
 ### platform/
 
 - management EKS의 Argo CD Application `iris-platform`이 읽는다. chart와 비밀이 아닌 설정은 iris-infra(`helm/charts/iris-platform`, `clusters/aws-dev-management/values/platform.yaml`)에 있다.
-- 내용은 컴포넌트별 이미지 digest뿐이다: `{"api": {"digest": "sha256:..."}, "buildWorker": {...}, "deployWorker": {...}}`. 빠진 컴포넌트는 배포되지 않는다.
-- iris-was의 수동 workflow가 선택한 컴포넌트의 digest만 바꿔 커밋한다(`deploy platform api,...: iris-was <sha>` + `Iris-Source-Sha`·`Iris-Image-Digest` trailer). rollback은 이전 커밋으로 되돌리는 커밋이다.
+- **레포마다 파일 하나**이고 그 레포의 workflow만 쓴다. 내용은 컴포넌트별 image digest뿐이다: `{"components": {"api": {"digest": "sha256:..."}, "build-worker": {...}}}`. 실행 방식은 iris-infra가 정하고, 빠지거나 infra에 정의되지 않은 컴포넌트는 배포되지 않는다.
+- workflow는 선택한 컴포넌트의 digest만 바꿔 커밋한다(`deploy platform api,...: iris-was <sha>` + `Iris-Source-Sha`·`Iris-Image-Digest` trailer). rollback은 이전 커밋으로 되돌리는 커밋이다.
 
 ## 규칙
 
@@ -75,7 +77,7 @@ values 예시(배포마다 달라지는 값만 넣는다. 리소스·Ingress·Ne
 | 주체 | 권한 | 용도 |
 | --- | --- | --- |
 | Deploy Worker (GitHub App) | Contents: Read and write | `services/` values 커밋 |
-| iris-was Deploy platform workflow (GitHub App) | Contents: Read and write | `platform/` digest 커밋 |
+| 서비스 레포 Deploy platform workflow (GitHub App) | Contents: Read and write | 자기 `platform/aws-dev-management/<repo>.yaml` 커밋 |
 | Argo CD (management EKS) | Contents: Read-only | ApplicationSet 동기화 |
 
 ## 미구현
