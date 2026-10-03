@@ -1,0 +1,33 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:a2cc1afe1203058f3b70d33d1fff0f4acf421b6569c1cc2f77fd5e0359a93e5d",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/13"
+  },
+  "iris": {
+    "deploymentId": 25,
+    "serviceName": "app-a",
+    "targetName": "aws"
+  },
+  "release": {
+    "id": 20,
+    "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "app-a-13.likelion.uk"
+  }
+}
