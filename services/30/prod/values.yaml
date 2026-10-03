@@ -1,6 +1,6 @@
 {
   "containerPort": 8080,
-  "deploymentStrategy": "CANARY",
+  "deploymentStrategy": "BLUE_GREEN",
   "health": {
     "timeoutSeconds": 300
   },
@@ -9,12 +9,12 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/30"
   },
   "iris": {
-    "deploymentId": 103,
+    "deploymentId": 104,
     "serviceName": "strategy-e2e",
     "targetName": "aws"
   },
   "release": {
-    "id": 47,
+    "id": 48,
     "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
   "replicas": 2,
