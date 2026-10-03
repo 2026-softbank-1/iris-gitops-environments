@@ -1,0 +1,17 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:b433433cbd70a7d248411b11f3b171b180a898e36480310dba7617e42fe4d68f",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/3"
+  },
+  "release": {
+    "id": 7,
+    "sourceSha": "7f061109e2d2b010c38c2c7e2f016df4842bf0d8"
+  },
+  "route": {
+    "host": "test-project-3.likelion.uk"
+  }
+}
