@@ -4,16 +4,16 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:abb574c1264396c783b0a60c1dec60147f29234e9a32a0c2d19ee322772b835e",
+    "digest": "sha256:c0c47307146706d5e03817d4c3edfaf1f21b5db62110b3c106d8b6a639f50a8e",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/24"
   },
   "iris": {
-    "deploymentId": 47,
+    "deploymentId": 93,
     "serviceName": "temp-log",
     "targetName": "aws"
   },
   "release": {
-    "id": 35,
+    "id": 42,
     "sourceSha": "54fa8072d9fbf817e3352f8eeee2344f37c8a813"
   },
   "replicas": 1,
