@@ -1,0 +1,33 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:4057a9e423c2bf3f9a6bb6584a1a34399b94d88c3ffa6c5b07aa25911b951cef",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/25"
+  },
+  "iris": {
+    "deploymentId": 53,
+    "serviceName": "public-autofix-demo",
+    "targetName": "aws"
+  },
+  "release": {
+    "id": 40,
+    "sourceSha": "57c082be45600dcac3a2e1bc8ca7131118dbaf8a"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "public-autofix-demo-25.likelion.uk"
+  }
+}
