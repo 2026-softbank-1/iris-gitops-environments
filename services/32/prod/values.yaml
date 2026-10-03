@@ -1,0 +1,34 @@
+{
+  "containerPort": 8080,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:8ef697c2d87eb954d55ba5dbae30b63e8dad1d1d0d477d7365caddbfa2b5da54",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/32"
+  },
+  "iris": {
+    "deploymentId": 110,
+    "serviceName": "prestop-e2e",
+    "targetName": "aws"
+  },
+  "release": {
+    "id": 53,
+    "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "prestop-e2e-32.likelion.uk"
+  }
+}
