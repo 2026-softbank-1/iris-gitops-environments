@@ -5,16 +5,16 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:4e15ae28d043922eeea885bb8ce559684576ee43d7a3ea892932e92269f05f53",
+    "digest": "sha256:21b1e59fa11677c506b0e494d1412f273120cac4e927dcf1730a57703ed74c6a",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/15"
   },
   "iris": {
-    "deploymentId": 31,
+    "deploymentId": 33,
     "serviceName": "fix-e2e-cb0b72-code",
     "targetName": "aws"
   },
   "release": {
-    "id": 24,
+    "id": 25,
     "sourceSha": "7af928ff6c599afda3853406ebbb21ec7e6ac893"
   },
   "replicas": 1,
