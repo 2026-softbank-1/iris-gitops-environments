@@ -4,17 +4,17 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:7611b6ce9d603925cc41a434bce7bca7e651d351e0a638fcf34670eb7194f154",
+    "digest": "sha256:6a16a7e6f17a73edbbf19ddeda13da69d1a14b668f67f1f8e6bb7d0638e7dc0a",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/1"
   },
   "iris": {
-    "deploymentId": 37,
+    "deploymentId": 15,
     "serviceName": "railway-deploy-demo",
     "targetName": "aws"
   },
   "release": {
-    "id": 28,
-    "sourceSha": "upload-55f60ed8e30b"
+    "id": 13,
+    "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
   "replicas": 1,
   "resources": {
