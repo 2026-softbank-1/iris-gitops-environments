@@ -1,20 +1,21 @@
 {
   "containerPort": 8080,
   "health": {
+    "path": "/health",
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:aebb78a6f96de543da9288901bf11a1d9bb912f21f16a4c0cff99b955b948dcc",
+    "digest": "sha256:4437a362fc358d11e2acc118c9d086cb012eadd7e8c0a4da2ea010358d22e07f",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/16"
   },
   "iris": {
-    "deploymentId": 28,
+    "deploymentId": 30,
     "serviceName": "fix-e2e-cb0b72-docker",
     "targetName": "aws"
   },
   "release": {
-    "id": 22,
-    "sourceSha": "4f9200e2632e09df9476a56402a5a35e98b1d5a3"
+    "id": 23,
+    "sourceSha": "1c283a66198edbc2a07ac0ee1168c8034aabbef2"
   },
   "replicas": 1,
   "resources": {
