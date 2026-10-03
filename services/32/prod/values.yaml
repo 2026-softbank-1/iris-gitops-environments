@@ -1,6 +1,6 @@
 {
   "containerPort": 8080,
-  "deploymentStrategy": "ROLLING",
+  "deploymentStrategy": "CANARY",
   "health": {
     "timeoutSeconds": 300
   },
@@ -9,12 +9,12 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/32"
   },
   "iris": {
-    "deploymentId": 112,
+    "deploymentId": 113,
     "serviceName": "prestop-e2e",
     "targetName": "aws"
   },
   "release": {
-    "id": 55,
+    "id": 56,
     "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
   "replicas": 2,
