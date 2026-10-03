@@ -9,12 +9,12 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/32"
   },
   "iris": {
-    "deploymentId": 111,
+    "deploymentId": 112,
     "serviceName": "prestop-e2e",
     "targetName": "aws"
   },
   "release": {
-    "id": 54,
+    "id": 55,
     "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
   "replicas": 2,
