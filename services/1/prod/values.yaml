@@ -1,5 +1,6 @@
 {
   "containerPort": 8080,
+  "deploymentStrategy": "ROLLING",
   "health": {
     "timeoutSeconds": 300
   },
@@ -8,14 +9,14 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/1"
   },
   "iris": {
-    "deploymentId": 49,
+    "deploymentId": 117,
     "serviceName": "railway-deploy-demo",
     "targetName": "aws"
   },
   "release": {
-    "id": 37
+    "id": 59
   },
-  "replicas": 1,
+  "replicas": 2,
   "resources": {
     "limits": {
       "cpu": "1",
