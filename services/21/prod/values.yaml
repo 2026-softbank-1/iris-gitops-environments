@@ -1,0 +1,33 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:6aef639ea8d046260630a16023c3da999c677204538c907178418334eb6f05eb",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/21"
+  },
+  "iris": {
+    "deploymentId": 36,
+    "serviceName": "test-project",
+    "targetName": "aws"
+  },
+  "release": {
+    "id": 27,
+    "sourceSha": "7f061109e2d2b010c38c2c7e2f016df4842bf0d8"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "test-project-21.likelion.uk"
+  }
+}
