@@ -8,10 +8,10 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/1"
   },
   "release": {
-    "id": 9,
+    "id": 10,
     "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
-  "replicas": 1,
+  "replicas": 2,
   "resources": {
     "limits": {
       "cpu": "1",
