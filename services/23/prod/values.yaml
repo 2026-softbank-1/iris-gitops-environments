@@ -4,16 +4,16 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:052fafe9c2a02ace9e206d4ecc515d66604bd78bd3746ac4f71d37368d716918",
+    "digest": "sha256:732acb4ce79b941facf50bbb5f845296bff98926c4303cea437a7a24694a9e25",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/23"
   },
   "iris": {
-    "deploymentId": 48,
+    "deploymentId": 50,
     "serviceName": "temp-log",
     "targetName": "aws"
   },
   "release": {
-    "id": 36,
+    "id": 38,
     "sourceSha": "54fa8072d9fbf817e3352f8eeee2344f37c8a813"
   },
   "replicas": 1,
@@ -29,5 +29,11 @@
   },
   "route": {
     "host": "temp-log-23.likelion.uk"
+  },
+  "variables": {
+    "encryptedData": {
+      "SESSION_SECRET": "AgC8IcevsAanBxmBqJM5aZz6FhyBMDWIGKyc0aTgQIfj2L69jZEiO/Y3OyQnsn5pTzZEtifzrYAmalswfg2q9LEZhvMr0hZ31PIl6VKz8ymlOXKZfyMLomstbpTlJiY5N/bXUAXnjF+EDvKmgP4TmqRzC1Uar/84nJCocPZEzNNvrUNuB2rZ6L8vwmhi/HePdsRef/vPCWu9sNIGp2wbpvDDKqA1Lj6w5DtejxWmIm9bpl3kI1xXv5hf9/aO6PSMEibfzvHemv4z485OoXMScJWgxWthuvSH3f/mXXQbkicogBNFRdOSp58ewwGgZ7aWF8mJgfC0sc594GTgqrdYQFGKi2my+/HDe4+KG3iQmRvHb047s3wBBgSK7UqWFjCZKAz/CfsmBmAQfbJQ8SFcp3ULcUO3mKEbaAoMhbngkdfjzVFAnvDbaS3KRocgw8jiCHFK3TnZ8Ly/NnieUhT10S+k6L9aUpBOr9BznLm4arcv0pxlCk1qeX8hOMVPW5kJSEvqlF3+Kf7e6yH11A+NNTLbpyP+UebaLcTGsuxHzGI32fxrNKSjVahI3752qKJv3GJby+VC5l/NbrM/iwVu2Cu9i8IjvVdUHi4eonP+tfV5oxmKq1qx0qQT5WLZb4g5isfMR68d1rx4Sef5pBMjLRL7kmtet4WNfKF40yQYw2ZsiQkfJIB3GV5lZCkg+K8g/if2pcONTyKs2WLFhd9wvOjJtrTTNB5V3T9o/nrV6T+jHQPlMT8m2yqjc3TTJ1CgQOyMOw=="
+    },
+    "name": "vars-r38"
   }
 }
