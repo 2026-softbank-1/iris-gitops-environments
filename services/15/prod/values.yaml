@@ -1,20 +1,21 @@
 {
   "containerPort": 8080,
   "health": {
+    "path": "/health",
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:e07878bbeefff20b6dc93ee3fe3d60a7cbbafe4c89842c5ae95cd1b9cd9b08bc",
+    "digest": "sha256:4e15ae28d043922eeea885bb8ce559684576ee43d7a3ea892932e92269f05f53",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/15"
   },
   "iris": {
-    "deploymentId": 29,
+    "deploymentId": 31,
     "serviceName": "fix-e2e-cb0b72-code",
     "targetName": "aws"
   },
   "release": {
-    "id": 21,
-    "sourceSha": "173635d849c598b5125c26798d65acd3d266491c"
+    "id": 24,
+    "sourceSha": "7af928ff6c599afda3853406ebbb21ec7e6ac893"
   },
   "replicas": 1,
   "resources": {
