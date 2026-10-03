@@ -5,16 +5,16 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:4437a362fc358d11e2acc118c9d086cb012eadd7e8c0a4da2ea010358d22e07f",
+    "digest": "sha256:c00c3ca7fc5015a48423749d2243f7861665586c7634dd08216bdef0af1a56dd",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/16"
   },
   "iris": {
-    "deploymentId": 30,
+    "deploymentId": 34,
     "serviceName": "fix-e2e-cb0b72-docker",
     "targetName": "aws"
   },
   "release": {
-    "id": 23,
+    "id": 26,
     "sourceSha": "1c283a66198edbc2a07ac0ee1168c8034aabbef2"
   },
   "replicas": 1,
