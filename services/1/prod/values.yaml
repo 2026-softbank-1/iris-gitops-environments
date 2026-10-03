@@ -7,15 +7,20 @@
     "digest": "sha256:6a16a7e6f17a73edbbf19ddeda13da69d1a14b668f67f1f8e6bb7d0638e7dc0a",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/1"
   },
+  "iris": {
+    "deploymentId": 13,
+    "serviceName": "railway-deploy-demo",
+    "targetName": "aws"
+  },
   "release": {
-    "id": 11,
+    "id": 12,
     "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
   "replicas": 1,
   "resources": {
     "limits": {
-      "cpu": "1",
-      "memory": "512Mi"
+      "cpu": "2",
+      "memory": "1Gi"
     },
     "requests": {
       "cpu": "100m",
