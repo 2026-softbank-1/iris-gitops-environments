@@ -1,0 +1,33 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:abb574c1264396c783b0a60c1dec60147f29234e9a32a0c2d19ee322772b835e",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/24"
+  },
+  "iris": {
+    "deploymentId": 47,
+    "serviceName": "temp-log",
+    "targetName": "aws"
+  },
+  "release": {
+    "id": 35,
+    "sourceSha": "54fa8072d9fbf817e3352f8eeee2344f37c8a813"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "temp-log-24.likelion.uk"
+  }
+}
