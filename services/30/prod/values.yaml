@@ -1,6 +1,6 @@
 {
   "containerPort": 8080,
-  "deploymentStrategy": "CANARY",
+  "deploymentStrategy": "BLUE_GREEN",
   "health": {
     "timeoutSeconds": 300
   },
@@ -9,12 +9,12 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/30"
   },
   "iris": {
-    "deploymentId": 106,
+    "deploymentId": 105,
     "serviceName": "strategy-e2e",
     "targetName": "aws"
   },
   "release": {
-    "id": 50,
+    "id": 49,
     "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
   },
   "replicas": 2,
@@ -30,11 +30,5 @@
   },
   "route": {
     "host": "strategy-e2e-30.likelion.uk"
-  },
-  "variables": {
-    "encryptedData": {
-      "NODE_OPTIONS": "AgCp7uo1h6R4q8qefk0AJmOG6yWbacVWAMeFFfLP1/FfxM3eXkWUHs9vrxikzYdgvXElpunIhas+wu/mBahQdDjn/FD7yNb35vcq4IHsep2/R9bWB2jg0n7XmvLjfxnm+RUyBk0yH1nv0bmUreCownbixvkjGrS2rOETkC4gpQ1KXaIMsrOk6qIvKJTQ23vbe5agLthRE0kqXpGr6J9U+Ya7tWpbCVal7YcpS4ZXDmdcgqCp0QSEHqlaqgbEoCPYDdZhYnhYy+41rwQy7p5VNvfpIOOONw6HyInaC7Mj7AOnSF5z8exaItLKaBgzSSuWgiIMUy57eDEz8ifGmVNkmolD8yiU069uXqP5rAt6mzIpj7ZZzlZs9/ngKsEfnMWBTmHRv5Fb2YDAKFipg8f/YuU5FdNtN0BUjzHneR2Varyn6c/POwFuRYE64akCb78CP9yj59le4jDAgMgyt6lvfA3caZ/7NEL9LLmychJGc4KUkslm1lAicobkVCKtotmIhf1MtoQbExI6BPQSd+7MwLDHaywuCP9rpBD7LVwPYn29Xk6BUToNOMT1thdX5JqqqfBvnQibqtsbOhv3W0delFs9xxVknj5PEvytYGZpfyAL4nVgUoNc+6BRI/nVqSV7taDXlsNPZ9BYRQZRgsSdwvGSb0ZaJ1qevvruvEMkNbx8vS5LKvqun0cDA2S1z6WLqmXeLnezzQY9dc7xQuifNXNhOB72NL/J8LVsoA=="
-    },
-    "name": "vars-r50"
   }
 }
