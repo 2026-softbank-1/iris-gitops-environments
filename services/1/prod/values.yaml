@@ -9,14 +9,14 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/1"
   },
   "iris": {
-    "deploymentId": 117,
+    "deploymentId": 118,
     "serviceName": "railway-deploy-demo",
     "targetName": "aws"
   },
   "release": {
-    "id": 59
+    "id": 60
   },
-  "replicas": 2,
+  "replicas": 1,
   "resources": {
     "limits": {
       "cpu": "1",
