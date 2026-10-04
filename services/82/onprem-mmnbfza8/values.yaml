@@ -1,0 +1,37 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:5d53b5a5dcd04a66354c2c089a955b9f74aeb211e70498d44f7f107f6de883f0",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/82"
+  },
+  "imagePullSecrets": [
+    {
+      "name": "iris-ecr-pull"
+    }
+  ],
+  "iris": {
+    "deploymentId": 257,
+    "serviceName": "e2e-metrics-svc",
+    "targetName": "onprem-mmnbfza8"
+  },
+  "release": {
+    "id": 127
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "e2e-metrics-svc-82-mmnbfza8.internal.likelion.uk"
+  }
+}
