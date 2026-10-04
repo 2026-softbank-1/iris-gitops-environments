@@ -1,0 +1,53 @@
+{
+  "containerPort": 4000,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "hostAliases": [
+    {
+      "name": "mongo",
+      "target": "app.svc-38.svc.cluster.local"
+    }
+  ],
+  "image": {
+    "digest": "sha256:1c6f39a461203785c84c061d54508684b69cefe6fae549ab229a50eb9fe7fb21",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/39"
+  },
+  "iris": {
+    "deploymentId": 148,
+    "serviceName": "app",
+    "targetName": "aws"
+  },
+  "projectId": "17",
+  "release": {
+    "id": 79,
+    "sourceSha": "03c736bab48fa2f9e24ed7950f0e27c11138e877"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "app-39.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  },
+  "variables": {
+    "encryptedData": {
+      "MONGO_APP_PASSWORD": "AgAAc4meYp5HnhCJf4ThU4N1qbGpFvfXTLEyLHf+LNj21Bc81vuYwO7cx8gPi3v9AeK0LUdjBwEPLHRFNGlPV6YmtU8ve0/6jhRI81yOokk6VQaWlNfRGysYH1+h2NfkNI5U0OHWp17N92O90STqRTxYcQLXgc8up4ctUg8Dgg9aGQ0YhreZB/1KFHkndi1xQBdXazVF4L3Kh9hbHgVVZLfyEdAGixrTtag4fHHZyZ8Dp8aF3VbXvAgDSXd1RYvtcw3EVVL9/gl4ryxw9e3WuRNUEPCSzhBEZPEWoS6CkEep1oDj2Nq7Zqvl2j9+yc5RF9RyNNLfz8jGlDcJ6UnedgTjNPIJMNZdQfuXe0+ba+OxHxFRyHfRzXdyTe+KPrS5bBgwoDp1CpEG27hApLSRoi6kFce0/H60mvoQeB5xdI2ZWNvpqSz0eAtFFnUce0wDL072punfJ8FBlCYZGqNNBmChczeN8FP92BHbIkgcQciv4MpskSUiJzmCwyYk2qC/xUW+48NNKIXbsHjCJTB4tOEYgZQY1wzc7a2ow/klAAgF62ajUQm8/hyRWAxFn5lTczHrc2/k6sxIRLkAkg6nKiivSRM0HeU7PkfMxgKskFlPgo1cqRhhuzSVINCLMhrL6wFIyiCf50/0pqBYoF60/zBMx8bcSBDRq0QRONWg5O3VWLnNwoe5T3WxQNFFP5w6yUrZaK7F",
+      "MONGO_ROOT_PASSWORD": "AgAl6GGJQuCmuNENyUY7ndkvHhGQ3LGh1pZY2BZx2LKiHfG86lChSR60o3hXlP8XqyCS/gL+g7MUNRbIWFQZrz0As7WlWp2CPmD6poq9Nq/S11N1sfEelTnMw3HmrnyJag9+7ej4CYWMUfoWH6W19lPypoKDfGfeFVV/Cnw3d1ZRJ5REcMXAGwH2Tvpx4Rawys6IevwEO4YSwvgNQbZ+ZwRKYi1swvfkzOkmzohmMZj/4XiZljw5lrzVfeJjBGSssnSMWdoMfjwYz4vyi6kZWqGKZSnY7T/syKcerF4TiR53sGtDjAyPvITDn4/NAfu05w1f299oogJ3K4+WVJkmcTENF5ZIKWqgqUVlE+mutcbuwpWqlLQOEGGpjiJGlzscF9NYvdJWxpcBKRqPHCD7YZwO4DP6bfcqYqZbhqUaORfFtK5yOZFdPWc0X6cR5fchIACCsuJLp25syDX4194DTpZq4TcDFTwe0hoZohQHnsE7BEQ8W6+k/0JPGhfU1Z+70wwDJYb5tHmS1M37d6e5zoEm6nDXRSIwhYUHxFKJl8O/DMtGRpcU6nlw+mIkeE+vJKAzSQARZymHo+wxRukQ4uvK3ah/t99wByOzxd3LdDrptfTuBE2xh3f/IKev7hflHWHCFNsKvNuTsRlU7okYiw/1UYaobJg0gxbeusOwR6MgxRr6bokPX/QHIiJlG/ekphl1+9T+",
+      "MONGO_URI": "AgAXPqV42riBI5xbN0Q40q7X/SRwU/sl3pxwhVxef5Q1DmKnos5sZw/awwUke8ycO+efvCcnA4QSJlcQg3thgElcC4SunTbGnXCSZUNnc4mJBWe4ef/lS6zJb7YY2xMG+NV7qibKCMuLoOP4PETmP/7FiKlPAb/SWtUOEFPQ/UEX4nfUs6DgwK+1BzR2lj60sBP5AeRU5eBFWz5+6MjLGaGC88nwbqoaD3t6WP1+aQgO25uqaD4jvoMBLgHyPwvW+8RGfP8lXVCRSdUL4jJbBNOffvfiJKM35UUkATIk+Wesrmr8WLd9mkxwEF90kU7Zq6wfnb/oY5j7a3ZFlUr1r/L+WY3vzWfEnaE6HPd1eM6/3lcyMIVpliWJzDq0ItT0sx5/KuGVbkanEHv449GN9YqoFYNJsZq918cI5tBb8pZYbo16VG4rI1vO8MI5Poo5xB8lIhder6kOaz843yhmI7a3cXog1phLKs53G4kGU1WTIbZphk7Ncyb5RlKgQrGRuix2Veg8Q/XVzvlTDamA3XPkbjFMJb9eu9GSNkVWDB7NWqTmpRaXClhMaalA+uWmT9c5sgzWMnv370DNiPzESIts6vJ137sjzAypiNI6LlFSvDIa4bwAn+u9jUqfH7dVRxyhxta/YFmx5F8mSSARczIEURA8NnUcPVDvTe5wfSU8JZz2TNtsa8dxYh6EeO53Woqy1qli3k7v9tnk1XrlJ+HhlwZEB0mkrvNwWyqaRKx9YolAWYpHnTJix/Jyk7JyxcOcj+yg/wLIJCKfVJF/b7U4aCZ11Rb2j/3nPYwQt02OWhkkTCzl8GeRhlXq+tohRC1BJKNZiBPT+Jw3N9I=",
+      "SESSION_SECRET": "AgCcUwyXJRt7eski9juPpewUxWBiFy0DICylgjO9Dw8dEPp/yxcHQ+n2XmRHWHpcQ/4lICLlDU+spYlepXSDdkczTNKmAOUPlaZhOkf87xbejzeLubxn4nal8G78c/1hCKPlAEgEUdNCnwOdEaZGdtIKrgEavHlC1/GHEydWZpr0vdLU6dQy9iEPwCG+7KtCO9Miw2wQoSe6Z4j1EF/YEZpzugllrv+s8npwPNB6TTz0wq91HkgmzzyE+yPqk6+XYOKfRfYe25utEX4L1ClnUCECi7MIoJa0sSAeb97SMFABLOmRjAWNsRcnwfxL+lDy6+ATHhdsq2T3OfpH+SxUWQaGgWzamdKX9aVmiLtZq7Jqyq3D/kr9w9hCFxD3qndAAggXFARUfkHMeoo6YBm7av1Tv69JnWTMBLrRHA+Ltd3NMAITaYxJ7bGufDRi90vCUKHST+8RDsmyHX/m3R624R0LW/BvUFi4ve+vE0YbmHTaTC9L4QWLwcP555jzRBH1QShMO0W2k8COvevwzgrZU2lkrQMG3xXxzDC5P8YTGDLChEcMHbeEswR1/s+bw+T51yzXGrxViR7zmvelup8tLSaHFDVUNPgETbN5E1VMEWCy9GfxsNXp2U4A1lcFPrCHU5AaTJslihKteY85cOfAuzI57j4Jex64anO7+g6h4nnHQWwheRF2uMdNAgpE1/rXb4csvGZon/y7ffT5zCVoLCH709MhYv5VNR2zGcKAQmDJosEGQf/rlvCtQdFZSXkt3eFtYsulEJb5y91l4ldDV1Eb"
+    },
+    "name": "vars-r79"
+  }
+}
