@@ -1,0 +1,44 @@
+{
+  "containerPort": 80,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "hostAliases": [
+    {
+      "name": "api",
+      "target": "app.svc-65.svc.cluster.local"
+    }
+  ],
+  "image": {
+    "digest": "sha256:789b18b2cc9b4bd6f48abd63607404731a1bbc02523e0a80fe62ec8b59a59083",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/66"
+  },
+  "iris": {
+    "deploymentId": 213,
+    "serviceName": "web",
+    "targetName": "aws"
+  },
+  "projectId": "37",
+  "release": {
+    "id": 102,
+    "sourceSha": "ad7ef4001b734afd4e1a1213c29a6c6e939097ed"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "web-66.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  }
+}
