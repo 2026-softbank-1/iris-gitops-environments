@@ -1,0 +1,37 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:0b967da9810f1f0cee477eaca10875e834fedb5b48d2cd26c9e7474c84d14a02",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/68"
+  },
+  "imagePullSecrets": [
+    {
+      "name": "iris-ecr-pull"
+    }
+  ],
+  "iris": {
+    "deploymentId": 231,
+    "serviceName": "e2e-disc-svc",
+    "targetName": "onprem-u4ikhfig"
+  },
+  "release": {
+    "id": 115
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "e2e-disc-svc-68-u4ikhfig.internal.likelion.uk"
+  }
+}
