@@ -1,0 +1,33 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:d39d87fe766263bdead3f637b7a1b0652c1090608ee446ca7d9c9f5bd90d0ea5",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/88"
+  },
+  "iris": {
+    "deploymentId": 283,
+    "serviceName": "gcp-demo",
+    "targetName": "gcp"
+  },
+  "release": {
+    "id": 132,
+    "sourceSha": "446917d6b46febbe2b4f7927166a0cc501de667e"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "gcp-demo-88.gcp.likelion.uk"
+  }
+}
