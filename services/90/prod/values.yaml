@@ -1,0 +1,50 @@
+{
+  "containerPort": 3000,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "hostAliases": [
+    {
+      "name": "db",
+      "target": "app.svc-89.svc.cluster.local"
+    }
+  ],
+  "image": {
+    "digest": "sha256:1743116e9c19acd1e5d8ec117ceb00bddc8cd49ee067d0a4525053aab47c16c2",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/90"
+  },
+  "iris": {
+    "deploymentId": 288,
+    "serviceName": "app",
+    "targetName": "aws"
+  },
+  "projectId": "60",
+  "release": {
+    "id": 134,
+    "sourceSha": "5e6ea055d35386993688b93a77de9d059477e179"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "app-90.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  },
+  "variables": {
+    "encryptedData": {
+      "DATABASE_URL": "AgC0eKzmqV7FtuhqStpFDIOmUkeVWWjoSfrGH0zuCt/LoHt7eMzXGHYnlWrSHPtEmmmHHzDfUqEA6kBQXU1T3uj3ZTH7XSx35GmSDPmPPi0xlkwpWOKpYBU55ob1tPVX0FSi1UuK1eN7m+qBU3YPJcMeCIgIN+0090GseQYTAzT6/vcwT1cUO+Ym+IHWYQktxcGvqztMSo0/Xx+V0c/8gJ35kk2QfdsBjidGo+rMjLfeEH3Yc0/5MRhPfbQVHdPKFM8cxxNWT9ybAPLC2hVKGU5GfQPDKvMsgVtpLGkS5wlR+f4H9MjMmvNyNznIIMbKimEN/PM0TKYjmzbMd8EQJRL1TblnssZGiFH+et95Vs2Vtxuxoypmpc0kngkB1ZMNkHpk93mZ5OOUVdg1UwyaZAW0/u1zvtL8Y46RuienofdTwKFjrlXEpYKhVkQXe/LuGyNbXZ77agDECq7AC7cXl9Rx7D9Qo2zoi5p9jy1WIE4DjxPY+HhemOQBJ9ZUuN4CmOLcanysUJmdM0Ih9DhOjro3NuPefAP/PEGQJUhPO6hBEdqxwFmOCsnQOyEygD8NlxHPiwxRymvmn07WOnUHBSvOtKfIuz2Q8mQDH8OyJA2+TCbNRu+KcYqTHRHvSeZyp5/LEwDAOS5g83IxXhQSLF3qTP7z45sspg7xwmOQGLmi6mznRzsoPvhG+Eg9prwh7r3evfXR8UK12nC2PDPGNHaj6wBL3vOtpxbxcILxxkYDpY4ED5e551LjaVreo4AsSLSCTpE85gBlyZm8wxF4uRO8edIXD20h8fei/JdAo6b5u696mBIp29c="
+    },
+    "name": "vars-r134"
+  }
+}
