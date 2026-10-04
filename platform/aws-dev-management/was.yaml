@@ -1,11 +1,11 @@
 {
   "api": {
-    "digest": "sha256:91b2ba0a55eb6b7cac06cff9fec11ad585010385fdd9be3410dd3d6aca18a762"
+    "digest": "sha256:dd6bfe27983c9ac777a0686dd9fd2f27891d4171804bf4ee5ce1dc8788691795"
   },
   "buildWorker": {
-    "digest": "sha256:91b2ba0a55eb6b7cac06cff9fec11ad585010385fdd9be3410dd3d6aca18a762"
+    "digest": "sha256:dd6bfe27983c9ac777a0686dd9fd2f27891d4171804bf4ee5ce1dc8788691795"
   },
   "deployWorker": {
-    "digest": "sha256:91b2ba0a55eb6b7cac06cff9fec11ad585010385fdd9be3410dd3d6aca18a762"
+    "digest": "sha256:dd6bfe27983c9ac777a0686dd9fd2f27891d4171804bf4ee5ce1dc8788691795"
   }
 }
