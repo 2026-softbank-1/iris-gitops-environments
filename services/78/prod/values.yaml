@@ -1,0 +1,29 @@
+{
+  "database": {
+    "engine": "postgres",
+    "image": "docker.io/library/postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea",
+    "port": 5432,
+    "storage": "5Gi"
+  },
+  "iris": {
+    "deploymentId": 249,
+    "serviceName": "postgres",
+    "targetName": "aws"
+  },
+  "projectId": "51",
+  "release": {
+    "id": 122
+  },
+  "replicas": 1,
+  "variables": {
+    "encryptedData": {
+      "POSTGRES_DB": "AgA6Lx+6KRkWN5AjEZ1TovYhzGk0ILoBpodLOTFmvsvugFXLA3eyvss9kCtFEXzlxSjVD2pPyPkeDCiIEkZHOhGk8quaLZa4FJdgS5DNPqdOjAqMnIyqJPSxR6AOQRhARQGa1XvGj6hlUDAK0mU80PA4JK3Z5SFbkw3t2BXIj+Im+gD3L/jdXf1sYNSBB44Th2YLRgk+bWZx4ivp+XePW0ucHlNfYnYTW4N1uYuzFBZuUlMfgJTf/DFQhLGNCY7wX5TLtDxrvXExY2eWWF5Ondoscv/I24bspgNafl2bQt3sbNdzJ3vk/kI7PWxT5wNQtgax2F5AdsRRGVIj+q2XdYm6VZ0jfkxaSKVCFLfE0UGV1GtfJazsSIsVB+NLjyu8ReiSoE7oAz77py0+TOuzdhHFTAPpCXsD8gZL5YvokrXQ5pqx2iCjDMiKNXMP68gJJoaZFMI5PMrNABX+BfVZfbYSL2hE2VdlACfaKUfTn9OV9C/FvwQ8OuAxJBqWwm0qPS0vKPc/FUa1lc169QH+1Mg0FMgegaqihvz/x68Mj59y0Sp/ZnwRY5mrSFzWQXxnRtKcq0+0Fm2bDu2Re5xVs+SklAElCl8rLfR2rMmxjHG0BHSio9BLMFXCkITmFWGcbry24I7r2/OC2Ro80P/PcacWs/KB6+sq7PFVM5Am2pdWgsmAgh9SP5xLlf+0L1XHHN3Y7h4=",
+      "POSTGRES_PASSWORD": "AgBBXRHIyONAYewKzw2AiUGWiHlsk0iyyQObDrIKcPh0u34XndjhrDmkko28rwm+ZI4JxQP+NPF98ixwki1Y+ikt7NKxfPVXVxQLZi2JWcQz/Bt3nChj2IG63QjAjf4LWXWJNFpuKJDyfbA/clZG1RXKJfU9rXXv+IalAWo9PNHW/DTG3K1Jq5mmjv7Zl+7JMXg/HVjNPni3zxdxOGG9wYWfY0LLywS3f5jqjGWpt58J5ekBS2pjd2VXOdTdGhHH51v0PovQvK527RS0UrDlwTgsptcPPdp3/+Ss8gQZVA07k721TwbCMyWkzT1FZZIzETf1QbAWFtbhJdHoQz2LchI0F4KNtz32du3XFoJUeMxk3Z2l+xDt4I8U/5zNDhKh2WyIvKVsNT0n4ekE+Zj9p2GB+Q5rEovVRbma8oYC6CfL9RMn141DkwUx7yJBiH+Xk3zy1ds4q0FxEpr8Fu16ptNWlL8mBGlda9Ce+X0ocdvQhxtliLn0ZQAXe4T/qGQaJ+3/ShOZosCfFLJl/N1bmBbLSeiYd6dBS7abICx/fygA8vpjUhd8OidnfP498mtwIFN0djUmHl2sMKQ0rBF3xOBJjQodtB+oJUhZScpC8cp+qKb1ea5p09vvH/sgcTElvzeHi6fHuamPkuNTAi15yfeJy/qHJzeWzAuivA1XL5as/IB4YhpUDRDcOYNwLeN/2kiURiTD1o30wPEmsFnKXEBf2vYVxUgZ38kGJFRIakr2sA==",
+      "POSTGRES_USER": "AgBiJIvZXgCaQhp8Z25UBZg+6DKLCQV4/h70m7RK5cdagXPrjIcPOlRUPXvdV4l4+I3ICks7hDch/fRNnfW+ZrP0kKSxQ9WFv9cl72S0wncpI8Tli0T8bVDtWDr5P07Y0jYatAL/d3wEkIKmnZL2zn0tGJqCKj8XQB19bmUsWr0ih7gbJK1VKj+aWO2rfpBRqlOMYAOr1YrAXhjiSNDxr9zr+Fv38BgrZ0thIAaZKVsJf0REiqN9n/jgDTp7rvadgISkEacWlI3r9r5UD2kbQT3I+DuusXrLsYHL7fWBP+uAwnLLt6/3lrqt8FWXzu/wlTF7IymGvWVgXbe1CbqdxoNrTz/kJaQZ29JzsAXZgyx/BsAGZLiMcSqbaTo+Y9F0DYXfyNNy0Bafc8mEFgdqnPZ4EwPZARL86sGOJiHGF+R2ifYG6l2STcZYrHog9mEzsvbwoQu7vAZxS4e36a8+DQa3UwjSf6YPX9YUCVpq/G/2+/OoKT7h7gV/nqGl2nuaD79Rxpkazl3MzRXFlWZBkcFNCzCgUVisDfOp6Qyw7mV7SkPZPbrNoDMgukarfX6AmIpEgBCQjHFa9A/y3cHniJ5i167rNfvpGqhOfGgC1iVoOXU+wb68vEdbU5z6mHGEcl80WHs00BR5aL+NZMBcip7uU0zno0skep9Zez5+s1U2A6TTmp/MGgQsTSTr1Pa5HHDEygJ1Zdb8ow=="
+    },
+    "name": "vars-r122"
+  },
+  "workload": {
+    "kind": "database"
+  }
+}
