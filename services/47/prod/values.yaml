@@ -1,0 +1,52 @@
+{
+  "containerPort": 4000,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "hostAliases": [
+    {
+      "name": "mongo",
+      "target": "app.svc-46.svc.cluster.local"
+    }
+  ],
+  "image": {
+    "digest": "sha256:5ab9441675d33c3ec28b2170f6cc17d7a0b6d31afcfa692c0295bf268f7e8f7e",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/47"
+  },
+  "iris": {
+    "deploymentId": 139,
+    "serviceName": "app",
+    "targetName": "aws"
+  },
+  "projectId": "20",
+  "release": {
+    "id": 73,
+    "sourceSha": "54fa8072d9fbf817e3352f8eeee2344f37c8a813"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "app-47.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  },
+  "variables": {
+    "encryptedData": {
+      "MONGO_APP_PASSWORD": "AgByEFw0qYj+pnTGMENvH4k49H12ihBtRcIIJOfLnQI9XN4rviAFdOHmPYq6FzGaieh8uD1myv3avX569okrH4eSC5oAR2QH9P4EOpLmDhrC/YX3wi5VPZdr/Usq5/JMmgikZs+pI7CuNEtGeyPFZ9k7DnqW5bMHZWI/IiGJDi/hdnM2ZhwuLAnzrQSVgRY9h5wnzB6f980NFTgICfzr9RpIlgvd0zz8J3pdqhebRQMG310CzM2/hR4syD+YaOnplLtMJmPm2PcWJTimVWa0wf2CZTJMy9acqFAF27F+helvFsxgBOettYDF3pzzKqDf9RetddQo9tZ0anCS8X3FfSD9286HOr65ArHsjtkxP2XqC///8ZJPhWlPqS8MZXGywOf1EEwa8SbxF3CFJZYvUJbhQi/KPN/4/IK6xHi8hDa9gUmY6BZta09LBB9C/sDakq4Swy9k36x+Ko3Wwen4TmMWqxMDgAtW++T20lYsc7Jwp6bfDvBItG9DYTWy1xl8Zp1juKDgJSNMvyLUMOpIaf0UBOY4GEYdTgMtIiCc/yxdd0Btvsw6lV39OQ75jm+SXt7u1uJiCMWfDguKUuF0diKVKl9edlqb8LHNTutHIAg6sZxH92V7zHWGKNZ4IzabYnMBECSK3NP+iEwulSOj7KYF+8IzC+wLSt6usgjuAwYZi+qQaHDU/7mt+J0ESwb95FaNZhbxFYiZ6mw8TJyfkA7Vi9sFmpAEDoZPDmq4jWYbWeDh2CjvBfLCd0Rk",
+      "MONGO_URI": "AgAK7LggTGfVQeSuf79XpGgHk671aAkuuLL3tjvKmKgIZPieDzTceS0FdlM3sm2BkvQz/otJNQHzt8tueJGatSwit9HXVn+STw+PrurEpkou6u5OJqPLNIWDw0j0sLJyN+kISFrEGvI5XHnGgfC601vQ1AGXvxLQvOOj0a35v9MIQXaGO2++vntpcxhz0R9SbebdVin3hdNH0cWPJNNiOK/JlYkS30uBCFvEikzG8OlRr42sQ6SYEG6zwhh3aAaxFGrstFa7ejlIVAZ6892UvAzpk4JNIC5lRt489nM99GHM2d7VgKVinPRMWQIzIxcV/NAQRwH+N6UdyuFHE20fYsNEWb8yIlOjYBrISPGLi7h+kCfSTnP/5GGIVDD4/lsC3VOOb14F8K9pE0Va9AqtA1fBt/YERTC3nNscsRLNSWH2cvUOtAgZunzba1rYC93xpiBjY6vJlbtd8sroRbHdMuV20xIGhsrniMdUThvmAJ0T6ItlNVYOP5EEzbfQOlm6dEhNh+dfNJkjGyOHlFNjVC4aDXey8dPvgPoEYejEDKtrTdvb8a5s68s2yrHWXTspy5tVcQVZr2rhwIHX705C85V124EvE86quFJAH3SytHVHMvelt0jAmNhWIkMylv6bi7jTUc4B49MoFaDE2colwEIYzdn27rt8i7fliZ0A7NoAal0xqVynMheO0rur4VpYJtUeniKfeRsGqubA/uZEBejagp5alBF4Uk1IpMH8eZjDxOWOtLBx8uH8/2bJV85gwtK7ZLxyxnwBIUj5r7U2J1Zvs47+yKkm3tUWjlxdK3/4GtLRcmeBU5koD4DbUsR4UTPpx1kQY60pFA/jGfu+yMCPGXX4ElU5phEfS/g=",
+      "SESSION_SECRET": "AgCKdNTGtxRXcIdCXfilb2vQE3P9TryUdi2MnOn5oelhYMR7tfe/zPBasDSou29EFn1B/qe5nJp9g4ixB9FaPx5vnltQeHx6BgQ8wfqhi1Y7nhUXCREg+sy33WVb23oRls6GfsyqMz4oIMLI8yawxx0RFRJndJbzaL5Aipd5ZTBmML1XOPlPJG8kK8r5AvgqhtxfJ+CxYN6wRb6GSBQ8yh7uH7ATc3xTrcdjvTnmF3hQoKQjXRf+CkCtAbGtpwuHaHqdCvl8rGiJw3Ma6ckNom/a99MZ25BsK4ILQYXCMxu2nq0Ryy1CqbXExuPZiQhF1juCBg3HfirRfTCVCbGeBPvyKUljuIXT7raeEdeQyiOVvfIVVjXxCGPni6vI20Mh3O9RcEk6zzOWNDDIwU09cEBC4JTOL4d/xoCO4nAsth8FsNbJKzy3AnQnkwIaQn5GUNFXYIm/f6FsY//m2SH34w6cXMvjEyvjo400vi9U9vjz4SNNCJf5mW/O7Z9JbsAih1Ki7dHR9ud9XPQTPErt2vk5mezRBHof3II8cbtAuqMUSb+UAP4plvMmXGDrqAcC8dmHqGaxx95DC37YH/iUg3S5g9A6tqykWz2H/xKzaNDikJ2nEa5oiYF9S/u+ovy4YiRWAS46UhBLrFX1x48LudXumMNjAAJ8oWc3VKvkiitVonb5D0VoVAF8l6aOwI7kuIHWCif3KM/4ewTPAPVVJqigz4w7mRP5QHFknyehEJgnaFy8Fv6WhqBcYcJn"
+    },
+    "name": "vars-r73"
+  }
+}
