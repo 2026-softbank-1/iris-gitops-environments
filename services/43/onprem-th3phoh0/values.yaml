@@ -1,0 +1,37 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:9b87ab3e367f8941248da91bdbda514f60aa53bdd2d5c4b42d99cf44ce29a8a3",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/43"
+  },
+  "imagePullSecrets": [
+    {
+      "name": "iris-ecr-pull"
+    }
+  ],
+  "iris": {
+    "deploymentId": 141,
+    "serviceName": "e2e-onprem-svc",
+    "targetName": "onprem-th3phoh0"
+  },
+  "release": {
+    "id": 74
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "e2e-onprem-svc-43-th3phoh0.internal.likelion.uk"
+  }
+}
