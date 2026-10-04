@@ -1,0 +1,38 @@
+{
+  "containerPort": 3000,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:e86fb6301a610ad47ab82e53fcdf494d9c1caf86161d42a5d47f70e5a6701c01",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/79"
+  },
+  "iris": {
+    "deploymentId": 250,
+    "serviceName": "app",
+    "targetName": "aws"
+  },
+  "projectId": "51",
+  "release": {
+    "id": 123,
+    "sourceSha": "24ff25cb5d3db1918125e8bab9395cd2309a98a4"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "app-79.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  }
+}
