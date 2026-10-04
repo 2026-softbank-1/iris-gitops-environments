@@ -11,17 +11,17 @@
     }
   ],
   "image": {
-    "digest": "sha256:1c562dd1c614b510b5539f0a4959b8222a662331b28d347860470cc8246df43b",
+    "digest": "sha256:f753f5d38bb499972885d82748881ac0826e44ac89e52e839cb500578eca9830",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/66"
   },
   "iris": {
-    "deploymentId": 222,
+    "deploymentId": 224,
     "serviceName": "web",
     "targetName": "aws"
   },
   "projectId": "37",
   "release": {
-    "id": 108,
+    "id": 110,
     "sourceSha": "ad7ef4001b734afd4e1a1213c29a6c6e939097ed"
   },
   "replicas": 2,
