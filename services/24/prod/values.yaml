@@ -1,0 +1,46 @@
+{
+  "containerPort": 8080,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:de5eb09932057d59ea1f8fdea1d839bafa0c0ef2d8efb9e3405cffea4b40d43a",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/24"
+  },
+  "iris": {
+    "deploymentId": 130,
+    "serviceName": "temp-log",
+    "targetName": "aws"
+  },
+  "projectId": "9",
+  "release": {
+    "id": 66,
+    "sourceSha": "54fa8072d9fbf817e3352f8eeee2344f37c8a813"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "temp-log-24.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  },
+  "variables": {
+    "encryptedData": {
+      "MONGO_URI": "AgARAc/TzjERas/IYOesBU5g9XnbM5cuRYN+UKT5UdmWKbaYszawXf9NRwhTqUv4+9XeWi72byH7Kxif6X+9DWkJeFSp4MYi3sj87mB9NS2U0OrfLjyaaP4N+eXGwRf6Dq1vnG7Nq1rtvA+sPUFYnZK4rLOThRHblbKsvqaoVSR4eD7gUTa/7o97mXwsPEp/6rUbuFPkf7/DT8joicBLOWR2BvqGAz4pnP1TtwyJMLdiA6QjAgrdFdw5vi3f9FkQEskU4tdMcAk2/SmhmVl+qDp4ZRIjVgEPdh62vGGFxR9ATR2XnYdT38QnLgyc817le6Pj1k+roFMB9b6qnrW+kwUl8ko247K9y5sxXjovZWHBzFMjN1LkzwgbnwrUn99gLd9vURJ4DkiTf/RWnOSHSF1yJ9VcRL658KboxZsx68SBPYIT3BUmwvtVbSAoHM+9f1Kaz0Af80DS6c+eU5TF3p6mJEcMJDipZ7jgfqi7Icroedfss7HEcMb6J0U3UFA8Z63+NOzM+8YcmVDqaoskUB9PH9n3f8JAvIhYwdMMwgE2S4A0C4chp7rKt5dJRE7bnIz+WnU5oS3SxgAt3QxyGmqyFXmtRv4LRTAJReBhF3PKTV/DOqPqVpGx7gvu0wZYTAtz+LpMgJu/Q0oBeC43uTjzarg5/tt7uVUYFNjcYSof8afq/iYBI+lx+uiZ5X3G9Zy6SEo5KKPz3O203D4i+GFn7fDVLzScN5gFbto3iX/qbipwczIHfHtiYtgvMMITuqJ2nluIbYehmevDtdCy623oF1GLLmAGw2kO/Ryj4/K9SixVMJAhl9msaExL2M9DXaJR/hyFs6I=",
+      "PUBLIC_URL": "AgAJgnwimjI//ESeSlkhWDaf9adBJBNll27rtim7KDTTb2jNya235TR+Yy+KN4bHlV+fBObA2UsLop62iIUs/UXN+z4knxSPzLdcGZdFb4s5J+rEfkl4l6Q6HaMWYZg6xqckXSPa1rtoNeez1rR6uc+x1bPSRlbjUMol3SzRAwl7yoiFTWxRVEXOUxyEDT9d4+26bn3cZOk1Uv9OJdKhnxsyu0lf4/KA4f6Rp/K+e6N/WB//PR33LBbMMvg6ycawONsGz6Cj5Ha+v4xF/Ly52U3inz9602XzMD3G/Sm4f2eCsSFQeqhGN1q9SXd4O8r8ScfDeOAxNoLoiWIPAtSwR4uXGvbE5+gCDrINnURELzweiRos3CflpaAIjKFQz0A80fx+Efx33yPX3wXV+BNOvw1nsdwbo4IYSIaPR+GAk/7PbWrMzvkMFWzEWnWW0fK/87Dz/2mdNylFdIZBhiq63n3Hr5rVMyYE9llVM0CDN/o8NN7WHsdA/2Cxt1ZSd2QTGH46i7VyneS1Aba2tX3zTQ0O7IreJJZpojHfTmxWVMwCP3c59eXeLnSdotJJMEd4HQ6a0oePW/70/kwW23tgHOgH+Dlb2u4KS/AN+7Cmv3i24bsrTZ9jYswdu0ZHtT+n/WgOCu+fp91zW1nB4wPMNIUF9dBNT/Q6mhP5eVgRwxT2/qcvWwK7UBK4fa7UCYW039swaHBaT5gq7Fmo+EC/ggIxYJGsUm4jwm6GbftiLJdZ",
+      "SESSION_SECRET": "AgCo8ZYTlFLPq+Dt2bPD2YNXu5ZnIRb6g8UhANJq55F5ET5HBdHIdPDMabRlqGSVK5gwXsIZlBUEmzNKF5WNYsSll4vetuxNwTvk9GY1eGwhlmZPLBcRURJLR7Il2quOLH4XNDuTBaAjmCxJiaFbygOtOLQIOaq3z7IYJTbwbdfAV3B/Sio82eBu8gUxMeSH/yI/AZw5JOz4XQZTZMnKpZYBNk/+Y2BZAZ2AqtQZr/h2pknTu0pPXAkaDiT3USnbKv9IcPkrywbWr4VsN0SsvBTAElmvxF4X4Yq02YxKqvg07SbKc0g/W+nObLpviP5dqVCiswlPlkzTQTky24BU9H9IPa2pdX3a85mwEx7K281cEemf0Hz9VBoOgTVxXXaLh2AUIslbLHJiVCyQK6hj8AxI1NSHY9Wf+xEwwGP29/Y3eLeoytZTeJxPTMR2cFbtebSZ4phqqKfsMYaOSqEnHrnaqCnvxeHmJhxK9jnf6u7Mkay325JgXyKd+gVbhr3YT8bubQ6NW7iM2RYs2rQ3EY27PHuEKKDYtp0QoTKW/OVxWNSynOu26p9F/vp193ws7nnE71YekY6OhEhvr12VkpLLcCqOjH33uQakr4VOBtabuL6knBhuX7ngAelP5b+NZvGDXvt5p3snDLcTsyI0RtKGVzbhMMNelrVUTqYJXitGc+GXyri1x3rAn8TliZIjJRfy/ZP8by6tCsl5QJbaFHvij+9D9c/Vcv+2iEBM8A6MssDSwX5NuSyUifkoKzFIlXgWoqtrzlc0Ynbd9I2vsZRb"
+    },
+    "name": "vars-r66"
+  }
+}
