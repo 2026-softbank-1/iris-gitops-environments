@@ -1,0 +1,38 @@
+{
+  "containerPort": 3000,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:65f8a7993709751961ef530904ed83a96d8e99c11b9d58a0fd253c5c33676d44",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/87"
+  },
+  "iris": {
+    "deploymentId": 274,
+    "serviceName": "test-project-main",
+    "targetName": "aws"
+  },
+  "projectId": "58",
+  "release": {
+    "id": 131,
+    "sourceSha": "0a93b47e46f164b6e29609e9d83be361c3dbcab3"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "test-project-main-87.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  }
+}
