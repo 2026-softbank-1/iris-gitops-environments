@@ -1,0 +1,29 @@
+{
+  "database": {
+    "engine": "postgres",
+    "image": "docker.io/library/postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea",
+    "port": 5432,
+    "storage": "5Gi"
+  },
+  "iris": {
+    "deploymentId": 211,
+    "serviceName": "postgres",
+    "targetName": "aws"
+  },
+  "projectId": "37",
+  "release": {
+    "id": 100
+  },
+  "replicas": 1,
+  "variables": {
+    "encryptedData": {
+      "POSTGRES_DB": "AgC7tN8AbzOiu906ptSMzUPS6SKWrNDMoIFaxvV7y3op6+4N7rmnGd8zbO20a4q1P7yBch53FMLGo+SEuKBnf7wvRsagbxuQ2XhQrV1REZd9Kc2NF7KuhMvYuyAM0YbTesOuQvLtLIC3pRYAdJl759twvQ3e3dICrAbZkjYH/S3Xz8iSusga+yS+ZHZMIvJJf1UFKSjkXD0GXvhSquie2RIsAQg6ruAD9Tm6uXJWw1FQ2rAdJfjK3yEhLKuo5JPeYCNwNI+czarxfUlqrfToyGjOgRBIwbLjDef3wCYCbwgNsx64IZ+DmMA9V+66PuGxKCLGAldYCtDovsWSOUgS7TGDJIdEDkr1lbAkA/NvYfLAI8clt8hA7jx6rdMduWN3Mh3nXfkK4uF4Iwyq8/TJRi36352rde3vEI/W/NrpZdSeBpKGnS0tb/RFmG/TojOYd5oRQ1Vc/4ZZlU6KcOoNT8vzlAuYo8JooKmJ6xlG5eIDY3eeRXl8eJ4OzZ/eC1nJt5MDwLdShwewnW1nswPFFMbjY979ZghdnXvNCf959mATtGmjzL9n3DI5BsBKw17+Ad8+VD0v3NaBqISHfYDHdosFxSfZjs9b6ZxkhscR82DYkgnn8IfCBSL1BlzpozdE95Kxlw0zYEk0YCqURyxv4HT4eTdodWsp3GwBAxPGSavboeoCLIS2dckC1SP1YSonZGLM9ET6",
+      "POSTGRES_PASSWORD": "AgBJnYoOQT+bxpB2uFA0B08gddTnq+bY4FvY6KVcl7SmECMQUaV6MVx63hi8Tc8oTVQX7A/oxSLI1NkKFIthaYnxhHt1DrVB/tE4RFLmBIuKqHECC6r5+ahRZJSkWxzguOIHoTELjty64ozy+lsC5AXA7j+uwXCkXJYm6+rNA1uYlhcYLGsZxhsySwDXA9GjnvbGwVs3SUZQqmTFZnjLp0f72pi7YTQpg4TBF3+fEcF0Hmkqhk/tKNOlbzliAgjIiE7XS1TSFy0C41K4QJmzUC+jdW1qaKq7p+oFsexB/x2axggh/Jq+0Cyh5krLH/SNmsnSOTRnirk1SlVeOYgLEVqHmW3nKEVs/lL66k9IiNaJ+CaBR4QKa8FOEaHQl0/Fbg1Rcs8ycQUVCUxF22G+JAXgRmRLO02CL+OmmbEPfnoMVr79lOzXo92uTZjhiu3JpsA3GxIQqx11YVIiBcZ2tft9Yd59FRtgMdKWrOQzOIU73GSfXsccDSSxxZvQCkm4iHIIDRxrcjbuyU19gzLGkIejToahJykaoF/YQW1r7DacCNesGBG9np1DoSt+Th/Mc3ZdygYl9fPR2lzWi4SGSJqLU125HT5/QldlwDYXj0dBLOJYr6/V6gCSJvfq8O7ZInRy4iJNRNM9cse6ToFdAyx2Kr4UE82ZC7rrKs3P08IAy9HHA3wTyuYaOE5uGJ5YVM4jSjH0peV82vad2WykdUaAUHGtbD6fnJzP+sMDA3VhaA==",
+      "POSTGRES_USER": "AgAgJkNu9C8QUnhZ6jAcppiKA61Hwv5AhL5CmpV+22HEq4RLY+boW5h56IAXF68maQFq0/ldP6/M14fICFT3dJh7G9YshqHcc6EwAWohJRwz52tbe3LC3rorTzlPNwXtbDav1uwf964EPQwpJqcqtTDfOKXoR0b3saMK1P7Cnkaxg8+DwXlLliVOq2oZfP4ufY/+Q+xWgPZ8QK7zjyds9uOHMhdd5mnbEmfWphiigOS+6OTLKX+oKYb8EH2/vIDWfyo04/PuMv805Ty85TutM08PcW/1pIKQpRvH5SqBa9NUM7p2ctQiVHbY0e0PXIqcEPInXCbeRWOtf9dkJ03oR+aUy+jK1WYbmnr5y26OyNEd6XjkkOGIiesXJVGyHm2XgGKpAmgxG9muxgCHU9jUfES807FD4TpzRaS1CjeKHHd2kdRUvsidCkfHFwptf8gSzpiolwwyIcoNAhb3rioJLPowxLHTHCxrfjqEQIHWz7l/7CfdUJtWZSWYf1WD6eHM03jMT8FTH+6C97AYpnunPpDhetvFmOGJhXftrvcCfOOAWA3dKTdbG7a5F5GGs7YTTm6rzYUDuJb7gpzkP1LkVujkRc1MIBEMhvHNXbGeHGGzJf5+Ld2ubIdK4Attcc+Fie4cwl1fyRUcW9kRPVcmObhVWl40M5r6WiBpkQn5gFsor1KB/1RwOJPjoHbM87DVTt1EtIir"
+    },
+    "name": "vars-r100"
+  },
+  "workload": {
+    "kind": "database"
+  }
+}
