@@ -1,0 +1,50 @@
+{
+  "containerPort": 3000,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "hostAliases": [
+    {
+      "name": "postgres",
+      "target": "app.svc-64.svc.cluster.local"
+    }
+  ],
+  "image": {
+    "digest": "sha256:649c17c177690fbea299c4e39e13b44340ae18b59ef34222f18ef7d03988a0fb",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/65"
+  },
+  "iris": {
+    "deploymentId": 212,
+    "serviceName": "api",
+    "targetName": "aws"
+  },
+  "projectId": "37",
+  "release": {
+    "id": 101,
+    "sourceSha": "ad7ef4001b734afd4e1a1213c29a6c6e939097ed"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "api-65.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  },
+  "variables": {
+    "encryptedData": {
+      "DATABASE_URL": "AgCmMtQ9CHDJwtBnVPbSwwn9fsJQj99X6zJCuru61Dc4HyH5Dr70+IJQ0l5wkklXZ4mo/L1P+udteo8b4SPpnwBpk0PkLETqsbvoUAxfBIaTpTs1usjFGFdynDoaBpaJD7JyTHwKCAu7mLc8bW0QjC9/pQM11v7bmvMaTZI3qRk4kJu6miBOwN3IjihEGpFx9mnkHSWRx83jaSZgscB3kiQE1loiNTH8u6FlvRUyvdcxm9tJ86wMkkzeS8dEfa2O7dS5dId/m9cxrwwiIKkAh0I+WO0lH5b2EnhNQ5cJg6ELLkymAFFGehJ7cLts+jX+x+B0w8Vxtlckd+rOVrsvJ4aDWt5Yr67iFMWsbBiVRpG6TRBYuARoHlb0sLc95Nu2psufCjFV6oN5SyzDjDjjYFyYBrakHKQ1XxE9Vu5UIBAEug06QeK0oborSiMjXuct/xW9xepdarnGXadnaj2xHy/PMy6sddbAFkkE8y51dsKiZY/bzWNkdKTiMqsrR7lIzV/pLAG7gV61WxdOE0BJY7PJQOJhRI2wKSVMckahHt0PPEe831sAecO4iySfHfuGO+e3HjeXCiITymzno2/gZLPoSYlGp8eTzRXsbJAflJ5RCZQOJEPp9h0HThCXGO92OUdCQQ0otic/r4vMZjqetZSXA6J2jcjZbWB/f82TWwyE6PyUT5/8mt/OaUhABO6QWgnSztA6G9RiOyGJIsBk13wmJ0/USUR5r+lde16mv0aOpLOId/wU/90e3cT/SuWL13zag2ntdFRnSPddYUx3yLSUFCZdsn7ULH87qu+vBQezA6tpR+0rEpY="
+    },
+    "name": "vars-r101"
+  }
+}
