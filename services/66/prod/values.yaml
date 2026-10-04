@@ -15,24 +15,24 @@
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/66"
   },
   "iris": {
-    "deploymentId": 219,
+    "deploymentId": 222,
     "serviceName": "web",
     "targetName": "aws"
   },
   "projectId": "37",
   "release": {
-    "id": 105,
+    "id": 108,
     "sourceSha": "ad7ef4001b734afd4e1a1213c29a6c6e939097ed"
   },
-  "replicas": 1,
+  "replicas": 2,
   "resources": {
     "limits": {
-      "cpu": "1",
-      "memory": "512Mi"
+      "cpu": "500m",
+      "memory": "256Mi"
     },
     "requests": {
       "cpu": "100m",
-      "memory": "256Mi"
+      "memory": "128Mi"
     }
   },
   "route": {
