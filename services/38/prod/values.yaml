@@ -1,0 +1,35 @@
+{
+  "database": {
+    "engine": "mongodb",
+    "image": "docker.io/library/mongo:7@sha256:1f995ad6fdb93244a1addab1b58f934a0bc2f5643c38e02f5e9d7f0c7d227a7b",
+    "initScripts": [
+      {
+        "content": "// Executed only when an empty MongoDB volume is initialized.\nconst appDb = db.getSiblingDB('archlog');\nappDb.createUser({user: 'archlog', pwd: process.env.MONGO_APP_PASSWORD, roles: [{role: 'readWrite', db: 'archlog'}]});\n",
+        "name": "00-mongo-init.js"
+      }
+    ],
+    "port": 27017,
+    "storage": "5Gi"
+  },
+  "iris": {
+    "deploymentId": 127,
+    "serviceName": "mongo",
+    "targetName": "aws"
+  },
+  "projectId": "17",
+  "release": {
+    "id": 64
+  },
+  "replicas": 1,
+  "variables": {
+    "encryptedData": {
+      "MONGO_INITDB_DATABASE": "AgCJ5GzuqYu141xgYImy3fPhHfDP3H8g42+QNwEaIVVDbcXrsYK0zZ/BkQ1nLJgaWW2Ls1UF9kpq+PzyOzykgSVQ9/27gIMplxiQsDrMqgH8ZUdiJuKOzfl4SkHEavP5eq7m0OvBL83YDHn2gsBcM4szFe0ZG1TH4XZULZIcc3O7OyugA2QlgE++lFpYyRyTqGTX2s/HI7RfM/16uVpQVCbaG63+90J9kxMEBkZ/v4K4YDjJDlV57N6B5Eh8NTH9nGgjCq54NocNRpkwmdOvd7vlV3VWT51sTXpkawAjwyPCUx1YDnKoorN1FUGB4DRrBmNUSFCm5w+qNbMx4zLXxLyLXSIscs+rMsY9VvyGFhky0wDcCJYCt9Gr6F2L3WhXgrmzV6KEVDfYSUx8XIw2QMQ4IagIVf9TshtF3NKZcbmsQyXkH/En0kQqM67zrJ9VGLB0fR//VwhLtv5qbMI9ga0Oz89N2xcSrokR1VsoIm2NyjrXutVKw/R9HkPh9uDxR7Byyb4pHXPT5F0nmAsihO/AuuoFWqz8P55Rdrox1XHa7iBasWOn4sTBnGpHLco8LI2ewYOBrJFb02eBxYt2RWSsS+OXMpGX7ks4c+8RASXrXc4wEGsfDfywuMlAxyq2FP7bf0wCFvZHepUujggRpC1sEDGG8hxwChj+FKekOEt62omevnW6mfgAo1P1gp63Iy4NkqszQb+L",
+      "MONGO_INITDB_ROOT_PASSWORD": "AgAhvYeF2US1iZ17x5/8WSI0D/w3aZ5jjjWHzVq0YZytZrPeYP0CX3epqwRbLrysg7HprMqrFAzSUqGvTLUWCzPeARjRzTrzgvhpJX+0R1iOHswl9BJ0MMZu6RWB4IZhSQu2m1x1ZmCYmdSW3o3QblZuS8QMahbQh5D50isSA3xH1jaP/5EY8BHLnJ8Q9cu6nAd/QIz2TpWU15tMdnY/THcZsDVdpSik5x65mFtgmgIA/AfIlkwqXzdnhy44eN3Cy/GAf2s5FMHuqPAzM4Xt3fBA7ehIFO19DKjahZYGuvSgUARrZMByGMXiYAc6c2ecmT31bG1yddu1+UGLDR/o6g/A8I3Jlj44efndv/0OGB0bz6u5ojT2BvLR/uMoaPGjV7tWHzYnfZysQevk+tq7Ez6apPeBL1vWeISa5+LFeZHnUP4cxDdn1Fwvcdd89yOZQ5nW+DwiRDHCXJUnk2RHssULihMAJ3pnJiBRwkuNNZN1c1h17rRGv9CjKyksaP2ru2RpUs3F7qatRWOevMCssM2BZVyoSwtnUUip8sNZtO4awg3efXl52lw1FKUytGaAOpmgTjzTHyRc+5pDMrxzIeo7nrm8opfnXHGtcdzUc5xGNNCQ01jFP8hmRcFcvIc9bIXgSpyazprmkqrPDlUSZGLyGH1rd0orec5HfTQGm9wPNjBpw+8NiBPI1fIzS5f51FoXvFzoWdzrDGTVxRS2NvzfXVK2KZRsRSPJ7cf12Vq4fg==",
+      "MONGO_INITDB_ROOT_USERNAME": "AgBSWA4fbsJAee9+rFON/lh6LSXKjX6u4EN9oxoDmIEHoIVLOQoYZsrNGM24+3jva6DwnsT5RhRTc405dr8yw4UJAror7jfciBN1F8RMjWoJbUvtctgIHweembK5mLB5xpyh4YJQ9Fi9lH48xLkBdisW6wcwhQvSi10V8i4Z9J5mVNneVUpXNz/EezBaRL9yjZIk1kZuLsN96BsGWIjMrhQh1UZFM26ly3gY0ZS4eZQcQE7L2eb88O9qpqY8CB0iWApBqb7kjwa5bZZySjUctq7fS/nBY/Bwv4xEHhmuOo5a68zyMIFM/QoRrpHvzYpPQxDl1DXbui67h0ugxGaNCdtmSpgcUn8ZgLzowfOI2wlks3cmijr1vHyAD/4zE09YKVJYWpsdrtZrHS03ag6qSAlfHvopqK0HIpCKEUYsNFWCUsdmBZsjevCID5HtwK+MHf5BmDWi8up8oSQjEZFq8TjpN39u0vTSiqjVLwFXOnNeIm7iLChVcVmd2RVxjAGoQFjfTgnQ6PASVNieMntxTnPYwiGNmjewmk7dXuPCLuIE+IA7Cn2IALCoeFfgfYZAdszC0uae9jegO6tVYcSfa59+OvoNoKQMBOikzKNBJqF0LT/E0t4ZKRMGpvTkTU9vK6ALA9ONuAB5emnl5WEjERqbziGicrpg82tGvPx4WInJFK9qf5j8zH5VAMBvfFya5Q8jux0="
+    },
+    "name": "vars-r64"
+  },
+  "workload": {
+    "kind": "database"
+  }
+}
