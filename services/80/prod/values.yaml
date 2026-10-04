@@ -1,0 +1,38 @@
+{
+  "containerPort": 8080,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:a639f0da1f6d61d5483ce693d27aad699c9282ac0cf72df126a06f733751b5d4",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/80"
+  },
+  "iris": {
+    "deploymentId": 251,
+    "serviceName": "iris-commerce-admin",
+    "targetName": "aws"
+  },
+  "projectId": "51",
+  "release": {
+    "id": 124,
+    "sourceSha": "24ff25cb5d3db1918125e8bab9395cd2309a98a4"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "iris-commerce-admin-80.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  }
+}
