@@ -1,0 +1,36 @@
+{
+  "database": {
+    "engine": "mongodb",
+    "image": "docker.io/library/mongo:7@sha256:1f995ad6fdb93244a1addab1b58f934a0bc2f5643c38e02f5e9d7f0c7d227a7b",
+    "initScripts": [
+      {
+        "content": "// Executed only when an empty MongoDB volume is initialized.\nconst appDb = db.getSiblingDB('archlog');\nappDb.createUser({user: 'archlog', pwd: process.env.MONGO_APP_PASSWORD, roles: [{role: 'readWrite', db: 'archlog'}]});\n",
+        "name": "00-mongo-init.js"
+      }
+    ],
+    "port": 27017,
+    "storage": "5Gi"
+  },
+  "iris": {
+    "deploymentId": 133,
+    "serviceName": "mongo",
+    "targetName": "aws"
+  },
+  "projectId": "18",
+  "release": {
+    "id": 68
+  },
+  "replicas": 1,
+  "variables": {
+    "encryptedData": {
+      "MONGO_APP_PASSWORD": "AgCfk5yAB1fhFghjFKA1k8UTliizv2qY0QTX7Tk5J423Ght4fR4byprZ3aHkLLQ0HiejAADHMGaW8V1JFrAkVtvLwavGlL6sHBGKO+Dc4KdP2AVisux/YFgBZlGRk1jb46CU9b2SPic7TQY499cGnTuIY6GxdRSdx6fuYdt0sNzz3Yw6wKppUO0wFodrkPQGHjdIkiA7mdSuZr7rfXdAZ8Gx19ILNxF3fI7Aw3HwwP9vWWc6FQTRAoB3dRTjBJv2NUt24QBb+zJhjk8jeJHcosh9zDjiuyx5haa0PqAwb8ytoT9E1Or23WpSdTVP6e6rgSsCDb93cRYlmDOCtOIOwQKct1XPGUMuxqSgVkEpbkJ4ZXfVjsy/EEXrdrZEHaq/eAyhK7Q4rZTSTdEGLPtV8dt/zlKTjKCKr0ckRc+13KYgHzN9jOeKDT18idA2D/M4N7VZujwendKCF35kvdNgxbhLHo/IWylFG7PPT5d3ER4t8HWk0FR38mB9ifqzB1JAcvQdRNOBGU+MoPAXSsGArj/UG/s0dKtb9eGij8cTLYlAPOzGCw6wQD9rPV1E3wXBREhJ8db0fEcxFIBWIdVjLiXGmhwS3OZnzvglWu1RSgGtQd3Gu8ytwgFn8/oCEOyFdUj3jELS9dPp8pjdcDUPfBbvyjxJf9aXlYF1vjn7TeJzZ/TX/0VM3B4VwVN+uY1t+zWN0ZqXd87JMCOUMTLWcj6VcDLR9Mg2ki2jP2fECvj2m5McbOwVVyssHlaP9NImMf8=",
+      "MONGO_INITDB_DATABASE": "AgCYK/RpSkRsT57bYDCYpcKh4YMWfBqNvB9hBMSqKO/eD/cgBnIvER0GLHcFlECwLc8IxUIW5kbat9ZnWl4NO7UsRxoKgkc+fwObkvAMLsLr1ZKZa8sbNfhTXfVayWwGfX8rVHGJaZrPIXg7rhDSBvqXmnTwoplApQYAquFBJV9kckdDFCZ/p/yjELQRlfZcj7Hu2y3ctWsBDTUoz2Qo8mnuW9uc+VvuP0PJz7FdAWNg5XGRh+jNTvOzBZt7s42NwmHkmc3nHZbf5c2n8BFcSO0he9o/YFrVctT8PVjLBq9PkESd8YxhBPnTqUzpx3lntaLbOBiF0LTvt0Q8ba+9Bn/+gWQVmU8cFZyICIaUfw/yQpPSinK2szfzpHNheoHUZwQPiZrzHy2Og0NLX82mPV1Reg8GuEBfWB0UDlKaPyS4/uiap6IAfLOQXsxvTePqRomzqdbilfv2LznFCbg+JJJk5o9KNWRrwFvlmxpKU04xluHAr/9aS3SZU1byktWi+vZYqOwVwf8w5ImFEtnk1fVLyM9LlDoST1/nOf2p2OTgXFvGcz9krJ/4OKJQQwCAcLt1N4by2unPeSACyzvKA30qIJ3xww3xtZsVyX7K49/A9LAYawTVwb6+0kqcHaEKoYqbk7TatLDkE7uU2lRsbKYw32s+uTmGLyTGZt/qKDaD0c6O5FSV4QbL+YxLVSvq6oPxrXD6//xt",
+      "MONGO_INITDB_ROOT_PASSWORD": "AgASRh+/OPs5KxGnb1UZ/bO4wttujTerbOo0i7x5Len+0vk5KnAY+oS1e0uAlvLdxaEKI45pA2ZZI3gFZjjh2H7B8Kq9KgXT5L41ot5w9mR8hjQjH1GaLj14ywNUQPBk+qL1O2h+tuYvjIc3L5c4gpUYW9AHR/FSZW1CuNzf5jJ4kvGLcpQsnV5tHRAf/V7OVOJHaJgTZHr8yC2RFj59k7TRTrcufBZMO95FGHSanAk+FjA6L7u5R3jpoxxcuzlTLDIXFbFPN1zIXCDov9hFY+GUo/axjaJpTARN9L0nv+Iz1lGopHHokAaCwErUmT5jqzNyp3GIW576fVDeRDY+jMCqcy9aR9BlMQJrGjyyJTK9mrIh2KXE48vPZqToLtwp6z4oTh/0tZlUlb4pmfGd4LO/bZynQRO+3Kv5GWCtm0+DrM78sKtEl9MROqRQzjw5gxAnY8tf2ZzLgepEZqXyEOfaqccXiM1/8eShz4sUUm3LzAkRAoNO6C65Ec+LShznG4tfjkYIyFOUYheXdSFwNANJMX44PqxTWmSDZfIxn7GB/JvctTckXE0tLOnci8jX/Gd29iYkjfrnOp5mtYyuXth8fyOCRUnl79TmRWNIyXStxzKUDEZcGq/w5Y90LBUQBrdmtmpn3tF/2koiNQFu6i5PZEYjpEcko4bqWkm/r8152/OIYUBdLnM0qvzdt2JHD/3kECzajTdDydNvRl/pSufq3DYG4B70LWULfcj62fGSog==",
+      "MONGO_INITDB_ROOT_USERNAME": "AgAwcWvVaqHX0GCBfXpPYyXbWeVnZkmpaMgVAn7uP0UjH2eYCxPm5+TvQUhsOJDlO5WK7U7GO4esHNs6SUXw7QbXZpC9+piU5he2Rb3AiqIKVChzyZKhRJ/iEh7xolxiemUSde3YQwN+JbI+XzzUjnD8A9DBr4Kj8sSGbFnJNTsWeEM9ogy2uw+D41kMxtsWAGY9Ca+RMrMa17sLuTloMxJKsToydLcR3cNF5Gk2Je98wyRYSgcCaEkNr8G7XU+vn/ukyc19n3vRayq254NEOkAJVLMTmkMENSK3Kp41vTgVGFGFbSbeShkXDkaCTcVnjh0O4+rjhlGUGUv4/bfERai4g4mkFNT+PiDyuj5OZn2HC+poNLgGDtbYBYLdQX75FP1SRBnorSPJQm0xY0AlEjp8XnZQ4DD7sY7inZwKlw/+2LuZzme/rHzOuhErGCbLHlIRfZ/tWP1/1XKjw1B6iGgAa2l70tyYt869aioNaWzrRwoPHRTQ8RUf/h3hBAQWtNOPzNPukY3+bcAI4DpmZWSjrjkMg6oARQyN6NNHuWELbturbZ8Pshb10l2b9zQdH1vMpdWjxAeURV67dC64MBemXk9xqlwNaGlDD8A33Hl86gYJBrt3PYY1Tw6Ms2qddCri2NOs7oFUAmtsF2TZZ/wiTNYmDcNS4lOSy05oupeDsEORKXVIW0WwxANiAgwo29sDTwY="
+    },
+    "name": "vars-r68"
+  },
+  "workload": {
+    "kind": "database"
+  }
+}
