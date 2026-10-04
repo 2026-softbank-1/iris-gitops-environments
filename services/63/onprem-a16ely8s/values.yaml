@@ -1,0 +1,38 @@
+{
+  "containerPort": 8080,
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:77e3b01b483859513966ff3a5edeb99e972bd09411d3467dfd68868513f8d1a5",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/63"
+  },
+  "imagePullSecrets": [
+    {
+      "name": "iris-ecr-pull"
+    }
+  ],
+  "iris": {
+    "deploymentId": 210,
+    "serviceName": "softbank-2026-demo-21111",
+    "targetName": "onprem-a16ely8s"
+  },
+  "release": {
+    "id": 99,
+    "sourceSha": "ec436b366a0bdea1874af81e6bdd49e02d7bf281"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "softbank-2026-demo-21111-63-a16ely8s.internal.likelion.uk"
+  }
+}
