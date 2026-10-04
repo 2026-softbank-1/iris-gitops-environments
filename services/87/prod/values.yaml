@@ -5,18 +5,18 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:65f8a7993709751961ef530904ed83a96d8e99c11b9d58a0fd253c5c33676d44",
+    "digest": "sha256:86897f2c2f2572def4141f464cba647a5499a147299480833e6d27844580abd3",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/87"
   },
   "iris": {
-    "deploymentId": 274,
+    "deploymentId": 289,
     "serviceName": "test-project-main",
     "targetName": "aws"
   },
   "projectId": "58",
   "release": {
-    "id": 131,
-    "sourceSha": "0a93b47e46f164b6e29609e9d83be361c3dbcab3"
+    "id": 135,
+    "sourceSha": "8179e227990054268e960aa1ede42ef473b514bc"
   },
   "replicas": 1,
   "resources": {
