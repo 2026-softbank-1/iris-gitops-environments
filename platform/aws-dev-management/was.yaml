@@ -1,6 +1,6 @@
 {
   "api": {
-    "digest": "sha256:5a86f68ee2c9454ee07931aea0c76c94d7037483e32e5acdd2758817f5ffaaf1"
+    "digest": "sha256:60b866de247e46ef6e625a60dddb94bd53c9234ae5fa0d9454eea28477bf3d01"
   },
   "buildWorker": {
     "digest": "sha256:3683432aff6a2a45373c87a7102970a5cf4eb615fa9d2cb384c27300b0868397"
