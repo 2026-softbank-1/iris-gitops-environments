@@ -4,7 +4,7 @@
     "timeoutSeconds": 300
   },
   "image": {
-    "digest": "sha256:0b967da9810f1f0cee477eaca10875e834fedb5b48d2cd26c9e7474c84d14a02",
+    "digest": "sha256:39adc69a3eab5981390a4d747c86bf91d5a8a61192ecb36f99d6953d82a4937e",
     "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/68"
   },
   "imagePullSecrets": [
@@ -13,12 +13,12 @@
     }
   ],
   "iris": {
-    "deploymentId": 231,
+    "deploymentId": 244,
     "serviceName": "e2e-disc-svc",
     "targetName": "onprem-u4ikhfig"
   },
   "release": {
-    "id": 115
+    "id": 121
   },
   "replicas": 1,
   "resources": {
