@@ -1,0 +1,38 @@
+{
+  "containerPort": 8080,
+  "deploymentStrategy": "ROLLING",
+  "health": {
+    "timeoutSeconds": 300
+  },
+  "image": {
+    "digest": "sha256:134fb9b6e917e203498a8194cf2296b0dd79e18c6861764bd82c59068cc480de",
+    "repository": "187069338876.dkr.ecr.ap-northeast-2.amazonaws.com/iris/services/76"
+  },
+  "iris": {
+    "deploymentId": 242,
+    "serviceName": "softbank-2026-demo-2",
+    "targetName": "aws"
+  },
+  "projectId": "38",
+  "release": {
+    "id": 119,
+    "sourceSha": "c3cb172cf11fa5b38bef8c56f83fef4c2025251f"
+  },
+  "replicas": 1,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    },
+    "requests": {
+      "cpu": "100m",
+      "memory": "256Mi"
+    }
+  },
+  "route": {
+    "host": "softbank-2026-demo-2-76.likelion.uk"
+  },
+  "service": {
+    "exposeContainerPort": true
+  }
+}
